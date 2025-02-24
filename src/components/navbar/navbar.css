@@ -1,0 +1,224 @@
+/* Navbar container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with invisible */
+  }
+  100% {
+    opacity: 1; /* End with fully visible */
+  }
+}
+
+.navbar {
+  animation: fadeIn 2s ease-in-out forwards; /* 2s duration, easing for smoothness */
+    opacity: 0; /* Start hidden */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    z-index: 10000;
+  }
+  
+  /* Left section: menu icon and logo */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  /* Right section: links */
+  .navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    /* border-radius: 5px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    /* border-bottom: 1px solid #fff; */
+  }
+  
+  .dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu li:hover {
+    color: #ffcc00;
+  }
+  
+/* Fullscreen menu styles */
+.fullscreen-menu {
+    position: fixed;
+    top: -100%;  /* Initially hidden above */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+.fullscreen-menu.closing {
+    animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+/* Menu list styles */
+.menu-list {
+    list-style: none;
+    padding: 50px;
+    margin: 0;
+    text-align: left;
+}
+
+.menu-item {
+    margin: 20px 0;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Add arrow to menu items */
+.menu-item::after {
+    content: ' >';
+    font-weight: bold;
+    color: #ffcc00;
+    position: absolute;
+    right: 0;
+}
+
+.menu-item:hover {
+    color: #ffcc00;
+}
+
+.menu-title {
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-title:hover::after {
+    width: 100px;
+  }
+  
+  /* Submenu styles */
+  .submenu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    /* text-align: center; */
+    animation: slideDownSubMenu 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .submenu-item {
+    margin: 10px 0;
+    font-size: 22px;
+  }
+  
+  .submenu-item a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .submenu-item a:hover {
+    color: #ffcc00;
+  }
+  
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ffcc00;
+}
+
+@keyframes slideDownSubMenu {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+  

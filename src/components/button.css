@@ -1,0 +1,55 @@
+.button {
+    position: relative; /* Needed for the absolute positioning of the pseudo-element */
+  }
+  
+  .button {
+    button {
+    padding: 10px 30px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(10, 78, 10);
+    color: rgb(10, 78, 10);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative; 
+    overflow: hidden; 
+  }
+
+  button::before {
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+  }
+  button:hover {
+    left: 0;
+    background-color: rgb(48, 48, 48); /* Optional: background color on hover */
+    color: white; /* Change text color to white */
+    border-color: white; /* Change border color to white */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+  }
+}
+  
+/*   
+  .button button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    border-color: white;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .button button:hover::before {
+    left: 0; 
+  }
+   */
+  
+  

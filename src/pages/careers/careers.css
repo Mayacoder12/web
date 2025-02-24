@@ -1,0 +1,138 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with invisible */
+  }
+  100% {
+    opacity: 1; /* End with fully visible */
+  }
+}
+
+.career-img {
+  animation: fadeIn 2s ease-in-out forwards; /* 2s duration, easing for smoothness */
+    opacity: 0; /* Start hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+    position: relative; /* Ensure that facility-title can be positioned relative to this container */
+    padding: 0px 0px;
+
+    .career-title {
+        position: absolute; /* Position it over the image */
+        top: 12%; /* Adjust the vertical position to the middle of the image */
+        left: 5.5%; /* Center horizontally */
+        color: black;
+        font-size: 3rem;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        padding: 30px 50px; /* Add some padding to the title */
+        border-left: 5px solid orangered; /* Border for extra emphasis */
+        z-index: 1200;
+        color: white;
+        text-align: left; /* Center the text */
+    }
+
+    .image {
+        position: relative; /* Make sure image container is relative to allow absolute positioning of title */
+        overflow: hidden; /* Ensure no overflow issues with image */
+        background-color: black;
+        img {
+            width: 100%;
+            height: 70%;
+            max-height: 90vw;
+            object-fit: cover;
+            border-bottom: 5px solid black;
+            opacity: 0.5;
+        }
+    }
+}
+
+#image {
+    
+}
+
+.form {
+    background-color: rgb(16, 16, 64);
+    color: white;
+.formhead {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    align-items: center;
+    border-radius: 20px;
+  }
+  
+  .section {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .section-header {
+    background-color: #f26430;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .resume-btn {
+    background-color: #f26430;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .note {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .captcha-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .captcha-text {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .refresh-btn, .submit-btn {
+    background-color: #1a8fe3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
